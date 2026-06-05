@@ -446,6 +446,7 @@ body.has-cursor, body.has-cursor * { cursor: none; }
 .project-card:hover .card-cover img { transform: scale(1.04); }
 
 /* Gradient cover backgrounds */
+.cover-datanews { background: linear-gradient(135deg, #051c2e 0%, #0a3d55 50%, #063d30 100%); }
 .cover-brand    { background: linear-gradient(135deg, #3b2000 0%, #8b5a1a 100%); }
 .cover-research { background: linear-gradient(135deg, #1a0e2e 0%, #3d2069 100%); }
 .cover-orange   { background: linear-gradient(135deg, #3b1200 0%, #c84b1f 100%); }
