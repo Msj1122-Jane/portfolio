@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>马仕瑾 | 内容创作者 · 数据叙事</title>
+  <meta name="description" content="马仕瑾，西南民族大学新闻学在读。内容创作者，数据叙事，技术探索者。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="cursor-dot"  aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+  <div class="progress"    aria-hidden="true"></div>
+  <div class="grain"       aria-hidden="true"></div>
+
+  <!-- ===== 导航 ===== -->
+  <header class="site-header" id="header">
+    <a class="brand" href="#home" data-cursor="link">马仕瑾<span class="brand-dot">.</span></a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#about"      data-cursor="link">简介</a>
+      <a href="#works"      data-cursor="link">作品</a>
+      <a href="#skills"     data-cursor="link">技能</a>
+      <a href="#experience" data-cursor="link">经历</a>
+      <a href="#contact"    data-cursor="link">联系</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" aria-label="切换主题" type="button" data-cursor="link">
+      <span class="theme-icon" aria-hidden="true"></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow reveal" style="--d:0">
+          西南民族大学 · 新闻学本科 · 成都
+          <span class="status-dot" aria-label="在读中"></span>
+        </p>
+        <h1 class="hero-title">
+          <span class="line reveal" style="--d:1">内容<span class="accent">创作者</span></span>
+          <span class="line reveal" style="--d:2"><span class="ol">数据</span>叙事</span>
+        </h1>
+        <p class="hero-sub reveal" style="--d:3">
+          我是<strong>马仕瑾</strong>，新闻学在读。<br>
+          把数据变成故事，把想法变成页面。
+        </p>
+        <div class="hero-actions reveal" style="--d:4">
+          <a class="btn btn-primary" href="#works"   data-cursor="view">看看我做的</a>
+          <a class="btn btn-ghost"   href="#contact" data-cursor="link">认识一下</a>
+        </div>
+        <div class="hero-meta reveal" style="--d:5" aria-hidden="true">
+          <span>大一在读</span>
+          <span>共青团员</span>
+          <span>河北石家庄</span>
+          <span>19 岁</span>
+        </div>
+      </div>
+
+      <!-- 照片 + 悬浮徽章 -->
+      <div class="hero-visual">
+        <div class="photo-tilt" id="photoTilt">
+          <div class="photo-inner">
+            <img src="assets/photo_nobg.png" alt="马仕瑾" class="portrait">
+            <div class="photo-shine"></div>
+          </div>
+          <div class="float-badge f1" aria-hidden="true">📰 新闻学在读</div>
+          <div class="float-badge f2" aria-hidden="true">📊 数据可视化</div>
+          <div class="float-badge f3" aria-hidden="true">✦ AIGC 探索</div>
+          <div class="float-badge f4" aria-hidden="true">内容策划</div>
+          <div class="deco-ring"      aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#about" data-cursor="link" aria-label="向下滚动">SCROLL ↓</a>
+    </section>
+
+    <!-- ===== 跑马灯 ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>内容策划</span><i>✶</i><span>数据新闻</span><i>✶</i>
+        <span>公众号运营</span><i>✶</i><span>视觉设计</span><i>✶</i>
+        <span>AIGC 创作</span><i>✶</i><span>品牌策划</span><i>✶</i>
+        <span>数据可视化</span><i>✶</i><span>技术探索</span><i>✶</i>
+        <span>内容策划</span><i>✶</i><span>数据新闻</span><i>✶</i>
+        <span>公众号运营</span><i>✶</i><span>视觉设计</span><i>✶</i>
+        <span>AIGC 创作</span><i>✶</i><span>品牌策划</span><i>✶</i>
+        <span>数据可视化</span><i>✶</i><span>技术探索</span><i>✶</i>
+      </div>
+    </div>
+
+
+    <!-- ===== 关于我 ===== -->
+    <section class="section about" id="about">
+      <div class="section-head">
+        <span class="sec-num">01</span>
+        <h2 class="sec-title reveal">关于我</h2>
+      </div>
+      <div class="about-grid">
+        <p class="about-lead reveal">
+          新闻学在读，一边做官媒编辑，
+          一边折腾<strong>数据新闻</strong>、<strong>AIGC</strong> 与前沿技术。
+        </p>
+        <p class="about-body reveal">
+          在西南民大新闻中心担任文字编辑，日常负责选题策划、写稿与一审一校，
+          参与过校园人物专访、国际报道、文化节气策划等多类型稿件。<br><br>
+          课余研究数据新闻可视化、AIGC 新闻生产与智能体工作流；
+          做摄影剪辑，跟踪前沿开发技术与行业热点。
+          喜欢在「把一件事说清楚」上反复较劲。
+        </p>
+      </div>
+      <ul class="edu reveal">
+        <li>
+          <span class="edu-school">西南民族大学</span>
+          <span class="edu-major">新闻学 · 本科 · 新闻传播学院（成都）</span>
+          <span class="edu-date">2025.09 — 2029.06</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ===== 作品 ===== -->
+    <section class="section works" id="works">
+      <div class="section-head">
+        <span class="sec-num">02</span>
+        <h2 class="sec-title reveal">作品 <em>Works</em></h2>
+      </div>
+
+      <!-- 公众号推文 -->
+      <div class="works-block">
+        <p class="works-label reveal">公众号推文</p>
+        <ul class="article-list">
+
+          <li class="article-row reveal" style="--c:var(--accent)">
+            <a href="https://mp.weixin.qq.com/s/Qd2PYDWN5t87Nx8ASRXeYA" target="_blank" rel="noopener" data-cursor="view">
+              <span class="a-idx">01</span>
+              <span class="a-main">
+                <span class="a-title">全员上岸！一间宿舍的四种逐梦姿态</span>
+                <span class="a-tags"><i>公众号专题</i><i>西南民族大学新闻中心</i></span>
+              </span>
+              <span class="a-metric">阅读 3万+</span>
+              <span class="a-arrow">↗</span>
+            </a>
+          </li>
+
+          <li class="article-row reveal" style="--c:var(--accent-2)">
+            <a href="https://mp.weixin.qq.com/s/_ifo8GA-p_36IjrVgua5vQ" target="_blank" rel="noopener" data-cursor="view">
+              <span class="a-idx">02</span>
+              <span class="a-main">
+                <span class="a-title">国际前沿｜国际人道工作者在关注什么？2026 日内瓦 HNPW 回顾</span>
+                <span class="a-tags"><i>国际报道</i><i>新闻中心</i></span>
+              </span>
+              <span class="a-metric">国际视野</span>
+              <span class="a-arrow">↗</span>
+            </a>
+          </li>
+
+          <li class="article-row reveal" style="--c:var(--accent)">
+            <a href="https://mp.weixin.qq.com/s/iREqD43W7jOIJkPy2n4nXw" target="_blank" rel="noopener" data-cursor="view">
+              <span class="a-idx">03</span>
+              <span class="a-main">
+                <span class="a-title">曾素君：坚持用真诚传递真善美</span>
+                <span class="a-tags"><i>人物专访</i><i>新闻中心</i></span>
+              </span>
+              <span class="a-metric">人物特稿</span>
+              <span class="a-arrow">↗</span>
+            </a>
+          </li>
+
+          <li class="article-row reveal" style="--c:var(--accent-2)">
+            <a href="https://mp.weixin.qq.com/s/f63G9LRQ8adTgcot6vrmaw" target="_blank" rel="noopener" data-cursor="view">
+              <span class="a-idx">04</span>
+              <span class="a-main">
+                <span class="a-title">点赞！民大学子再登《人民日报》</span>
+                <span class="a-tags"><i>新闻报道</i><i>新闻中心</i></span>
+              </span>
+              <span class="a-metric">人民日报转载</span>
+              <span class="a-arrow">↗</span>
+            </a>
+          </li>
+
+          <li class="article-row reveal" style="--c:var(--accent)">
+            <a href="https://mp.weixin.qq.com/s/GlgtLipS-DDccQVNwy72kA" target="_blank" rel="noopener" data-cursor="view">
+              <span class="a-idx">05</span>
+              <span class="a-main">
+                <span class="a-title">迎新春·话年俗｜小年启程，民大人的五重年味正在派送</span>
+                <span class="a-tags"><i>文化节气</i><i>图书馆公众号</i></span>
+              </span>
+              <span class="a-metric">节气创意</span>
+              <span class="a-arrow">↗</span>
+            </a>
+          </li>
+
+          <li class="article-row reveal" style="--c:var(--accent-2)">
+            <a href="https://mp.weixin.qq.com/s/ENkPAhn5MqrLT3OcC8eXIA" target="_blank" rel="noopener" data-cursor="view">
+              <span class="a-idx">06</span>
+              <span class="a-main">
+                <span class="a-title">不止突破，这里有民大青春该有的模"Young"！</span>
+                <span class="a-tags"><i>校园人物</i><i>新闻中心</i></span>
+              </span>
+              <span class="a-metric">青春叙事</span>
+              <span class="a-arrow">↗</span>
+            </a>
+          </li>
+
+          <li class="article-row reveal" style="--c:var(--accent)">
+            <a href="https://mp.weixin.qq.com/s/2aEwjHTKOx9nFVDYs9FhqA" target="_blank" rel="noopener" data-cursor="view">
+              <span class="a-idx">07</span>
+              <span class="a-main">
+                <span class="a-title">2026 年 4·23 世界读书日｜"一骑绝尘·跨界阅读赛"</span>
+                <span class="a-tags"><i>活动策划</i><i>图书馆公众号</i></span>
+              </span>
+              <span class="a-metric">创意活动</span>
+              <span class="a-arrow">↗</span>
+            </a>
+          </li>
+
+          <li class="article-row reveal" style="--c:var(--accent-2)">
+            <a href="https://mp.weixin.qq.com/s/EVLgGlKjl5c_ymvQi7tTFw" target="_blank" rel="noopener" data-cursor="view">
+              <span class="a-idx">08</span>
+              <span class="a-main">
+                <span class="a-title">春天在民大，"她"在春天里</span>
+                <span class="a-tags"><i>人文关怀</i><i>新闻中心</i></span>
+              </span>
+              <span class="a-metric">主题策划</span>
+              <span class="a-arrow">↗</span>
+            </a>
+          </li>
+
+          <li class="article-row reveal" style="--c:var(--accent)">
+            <a href="https://mp.weixin.qq.com/s/Gruq11Mt8QO1_6rvkg2vwQ" target="_blank" rel="noopener" data-cursor="view">
+              <span class="a-idx">09</span>
+              <span class="a-main">
+                <span class="a-title">春和景明，阅启新程｜图书馆邀你共赴书香之约</span>
+                <span class="a-tags"><i>活动推广</i><i>图书馆公众号</i></span>
+              </span>
+              <span class="a-metric">活动推广</span>
+              <span class="a-arrow">↗</span>
+            </a>
+          </li>
+
+          <li class="article-row reveal" style="--c:var(--accent-2)">
+            <a href="https://mp.weixin.qq.com/s/ut6tBtrxwqU_Hux-l5mOpQ" target="_blank" rel="noopener" data-cursor="view">
+              <span class="a-idx">10</span>
+              <span class="a-main">
+                <span class="a-title">开考！</span>
+                <span class="a-tags"><i>校园资讯</i><i>新闻中心</i></span>
+              </span>
+              <span class="a-metric">校园报道</span>
+              <span class="a-arrow">↗</span>
+            </a>
+          </li>
+
+        </ul>
+      </div><!-- /公众号推文 -->
+
+      <!-- 项目作品 -->
+      <div class="works-block">
+        <p class="works-label reveal">项目作品</p>
+        <div class="project-grid">
+
+          <!-- 生发万象 H5 -->
+          <article class="project-card reveal" style="--card-idx:0">
+            <div class="card-tilt-inner">
+              <div class="card-cover cover-h5">
+                <img src="assets/h5-cover.png" alt="生发万象数据新闻H5封面">
+                <div class="card-shine"></div>
+              </div>
+              <div class="card-body">
+                <div class="card-tags">
+                  <span>数据新闻</span><span>易企秀 H5</span><span>决赛第三名</span>
+                </div>
+                <h3>生发万象 · 数据叙事 H5<small>主流媒体生态文明报道数据库</small></h3>
+                <p>《光明日报》2004—2024 年生态文明报道，2000+ 条数据可视化呈现。</p>
+                <div class="card-action"><span class="card-qr-hint">扫描封面二维码查看 ↗</span></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 柏舍梨匠 -->
+          <article class="project-card reveal" style="--card-idx:1">
+            <div class="card-tilt-inner">
+              <div class="card-cover cover-brand">
+                <div class="cover-text-bg" aria-hidden="true">品牌<br>全案</div>
+                <div class="card-shine"></div>
+              </div>
+              <div class="card-body">
+                <div class="card-tags">
+                  <span>品牌策划</span><span>核心文案</span><span>AIGC 视觉</span>
+                </div>
+                <h3>梨想生活，匠心守御<small>柏舍梨匠品牌策划案</small></h3>
+                <p>2 万字品牌焕新全案，统筹策划与文案输出，AIGC 辅助视觉呈现，提效 30%。</p>
+                <div class="card-action">
+                  <a href="../马仕瑾 梨想生活，匠心守御——柏舍梨匠品牌策划案.pdf" download data-cursor="link">下载 PDF ↓</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 民族风穿搭调研 -->
+          <article class="project-card reveal" style="--card-idx:2">
+            <div class="card-tilt-inner">
+              <div class="card-cover cover-research">
+                <div class="cover-text-bg" aria-hidden="true">学术<br>研究</div>
+                <div class="card-shine"></div>
+              </div>
+              <div class="card-body">
+                <div class="card-tags">
+                  <span>学术研究</span><span>数据分析</span><span>共同体意识</span>
+                </div>
+                <h3>民族风穿搭的共同体意识传播调研</h3>
+                <p>社交媒体视域下民族风穿搭的共同体意识传播研究，多源数据分析。</p>
+                <div class="card-action">
+                  <a href="../社交媒体视域下民族风穿搭的共同体意识传播调研.pdf" download data-cursor="link">下载 PDF ↓</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- 橙意秭归 -->
+          <article class="project-card reveal" style="--card-idx:3">
+            <div class="card-tilt-inner">
+              <div class="card-cover cover-orange">
+                <div class="cover-text-bg" aria-hidden="true">挑战<br>杯</div>
+                <div class="card-shine"></div>
+              </div>
+              <div class="card-body">
+                <div class="card-tags">
+                  <span>商业计划书</span><span>IP 化运营</span><span>校级三等奖</span>
+                </div>
+                <h3>橙意秭归<small>秭归脐橙 IP 盲盒农商项目</small></h3>
+                <p>新消费与文化创意赛道，秭归脐橙全流程 IP 盲盒文创农商计划，挑战杯校级三等奖。</p>
+                <div class="card-action">
+                  <a href="../新消费与文化创意赛道 橙意秭归——秭归脐橙全流程IP盲盒的文创农商计划 黄昕睿 商业计划书(2)(1)(2).docx" download data-cursor="link">下载文档 ↓</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div><!-- /项目作品 -->
+
+    </section>
+
+    <!-- ===== 技能 ===== -->
+    <section class="section skills" id="skills">
+      <div class="section-head">
+        <span class="sec-num">03</span>
+        <h2 class="sec-title reveal">专业技能</h2>
+      </div>
+      <div class="skill-grid">
+        <article class="skill-card reveal" data-cursor="card">
+          <header><span class="skill-idx">A</span><h3>内容策划</h3></header>
+          <ul>
+            <li>新媒体选题策划与热点追踪，独立撰写品牌策划案、新闻专题及营销软文</li>
+            <li>微信公众号后台 + 135 编辑器 / 秀米排版与内容发布</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal" data-cursor="card">
+          <header><span class="skill-idx">B</span><h3>视觉设计</h3></header>
+          <ul>
+            <li>Photoshop 图像处理与视觉设计</li>
+            <li>PR / 剪映 基础剪辑与特效制作</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal" data-cursor="card">
+          <header><span class="skill-idx">C</span><h3>数据分析</h3></header>
+          <ul>
+            <li>多源数据采集、清洗与结构化处理</li>
+            <li>数据可视化呈现，具备数据新闻叙事思维</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal" data-cursor="card">
+          <header><span class="skill-idx">D</span><h3>AI 应用</h3></header>
+          <ul>
+            <li>提示词工程，AIGC 工具生成图文音视频素材</li>
+            <li>HTML / CSS / JS 搭建 H5 交互页面与网页</li>
+            <li>智能体开发，工作流自动化</li>
+          </ul>
+        </article>
+        <article class="skill-card reveal" data-cursor="card">
+          <header><span class="skill-idx">E</span><h3>办公协作</h3></header>
+          <ul>
+            <li>Office 文档排版、数据报表与演示</li>
+            <li>多任务并行、团队沟通与项目协调</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== 经历 ===== -->
+    <section class="section experience" id="experience">
+      <div class="section-head">
+        <span class="sec-num">04</span>
+        <h2 class="sec-title reveal">经历</h2>
+      </div>
+      <ol class="timeline">
+        <li class="t-item reveal">
+          <div class="t-date">2025.10 — 2026.06</div>
+          <div class="t-body">
+            <h3>西南民族大学新闻中心 <span class="t-role">微信团队 · 文字编辑</span></h3>
+            <p>参与学校及图书馆公众号选题策划，累计撰写并发表原创推文 <b>20+ 篇</b>。策划《全员上岸！一间宿舍的四种逐梦姿态》专题，实现单篇阅读量 <b>3 万+</b>，显著提升账号活跃度与转发率。</p>
+          </div>
+        </li>
+        <li class="t-item reveal">
+          <div class="t-date">2025.10 — 2026.06</div>
+          <div class="t-body">
+            <h3>西南民族大学创新创业联合会 <span class="t-role">创新中心 · 干事</span></h3>
+            <p>参与 5 场规模超 200 人的双创赛事，协调场地、物料及人员分工；完成 <b>100+ 个</b>创新创业项目的材料审核。</p>
+          </div>
+        </li>
+        <li class="t-item reveal">
+          <div class="t-date">2026.05 — 2026.06</div>
+          <div class="t-body">
+            <h3>成都合众公益发展中心 <span class="t-role">传播志愿者</span></h3>
+            <p>负责公益机构公众号内容运维，通过优化标题与封面图，使单篇推文平均阅读量提升 <b>20%</b>，扩大公益项目社会影响力。</p>
+          </div>
+        </li>
+        <li class="t-item reveal">
+          <div class="t-date">2025.09 — 2026.06</div>
+          <div class="t-body">
+            <h3>班级宣传委员</h3>
+            <p>策划并执行 3 场主题团日活动，活动参与度 <b>98%</b>；负责 2 场校级班会的影像记录与新闻稿撰写，稿件被学院官方公众号录用。</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ===== 联系 ===== -->
+    <section class="contact" id="contact">
+      <div class="contact-inner">
+        <p class="eyebrow reveal">Get in touch</p>
+        <h2 class="contact-title reveal">如果你也在做有趣的事，<br>欢迎来认识一下。</h2>
+        <div class="contact-links reveal">
+          <a href="tel:18631123769" class="c-link" data-cursor="link">
+            <span class="c-label">电话</span>
+            <span class="c-value">186 3112 3769</span>
+          </a>
+          <a href="mailto:18631123769@163.com" class="c-link" data-cursor="link">
+            <span class="c-label">邮箱</span>
+            <span class="c-value">18631123769@163.com</span>
+          </a>
+          <a href="../马仕瑾2026简历.pdf" download class="c-link" data-cursor="link">
+            <span class="c-label">简历</span>
+            <span class="c-value">下载 PDF 简历 ↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 马仕瑾</span>
+    <span>新闻学在读 · 内容创作 · 技术探索</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
