@@ -483,6 +483,7 @@ body.has-cursor, body.has-cursor * { cursor: none; }
 }
 .card-body p { font-size: 13.5px; color: var(--muted); margin: 0 0 16px; line-height: 1.65; }
 .card-action { font-family: var(--mono); font-size: 12.5px; }
+.card-action--row { display: flex; gap: 16px; flex-wrap: wrap; }
 .card-action a { color: var(--accent); transition: text-decoration .2s; }
 .card-action a:hover { text-decoration: underline; }
 .card-qr-hint { color: var(--muted); }
