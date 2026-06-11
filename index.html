@@ -293,7 +293,9 @@
                 </div>
                 <h3>生发万象 · 数据叙事 H5<small>主流媒体生态文明报道数据库</small></h3>
                 <p>《光明日报》2004—2024 年生态文明报道，2000+ 条数据可视化呈现。</p>
-                <div class="card-action"><span class="card-qr-hint">扫描封面二维码查看 ↗</span></div>
+                <div class="card-action">
+                  <button class="qr-btn" onclick="document.getElementById('qrModal').style.display='flex'" data-cursor="link">点击查看二维码 · 手机扫码体验 ↗</button>
+                </div>
               </div>
             </div>
           </article>
@@ -311,8 +313,9 @@
                 </div>
                 <h3>梨想生活，匠心守御<small>柏舍梨匠品牌策划案</small></h3>
                 <p>2 万字品牌焕新全案，统筹策划与文案输出，AIGC 辅助视觉呈现，提效 30%。</p>
-                <div class="card-action">
-                  <a href="../马仕瑾 梨想生活，匠心守御——柏舍梨匠品牌策划案.pdf" download data-cursor="link">下载 PDF ↓</a>
+                <div class="card-action card-action--row">
+                  <a href="assets/brand-plan.pdf" target="_blank" rel="noopener" data-cursor="link">查看策划案 ↗</a>
+                  <a href="assets/brand-plan.pdf" download="柏舍梨匠品牌策划案.pdf" data-cursor="link">下载 PDF ↓</a>
                 </div>
               </div>
             </div>
@@ -331,8 +334,9 @@
                 </div>
                 <h3>民族风穿搭的共同体意识传播调研</h3>
                 <p>社交媒体视域下民族风穿搭的共同体意识传播研究，多源数据分析。</p>
-                <div class="card-action">
-                  <a href="../社交媒体视域下民族风穿搭的共同体意识传播调研.pdf" download data-cursor="link">下载 PDF ↓</a>
+                <div class="card-action card-action--row">
+                  <a href="assets/research.pdf" target="_blank" rel="noopener" data-cursor="link">查看报告 ↗</a>
+                  <a href="assets/research.pdf" download="民族风穿搭传播调研.pdf" data-cursor="link">下载 PDF ↓</a>
                 </div>
               </div>
             </div>
@@ -475,6 +479,16 @@
     </section>
 
   </main>
+
+  <!-- H5 二维码弹窗 -->
+  <div class="qr-modal" id="qrModal" onclick="this.style.display='none'">
+    <div class="qr-modal-inner" onclick="event.stopPropagation()">
+      <button class="qr-close" onclick="document.getElementById('qrModal').style.display='none'" aria-label="关闭">✕</button>
+      <p class="qr-title">生发万象 · 数据叙事 H5</p>
+      <img src="assets/h5-cover.png" alt="扫描二维码查看H5" class="qr-img">
+      <p class="qr-hint">用手机扫描封面中的二维码即可体验</p>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <span>© 2026 马仕瑾</span>
