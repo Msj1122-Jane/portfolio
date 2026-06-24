@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<title>萌想科技·实习僧 新媒体运营实习 面试准备 — 马仕瑾</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #1a1a1a;
+    background: #f5f5f7;
+    padding: 0 0 60px;
+  }
+  .cover {
+    background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+    color: white;
+    padding: 48px 32px 40px;
+    text-align: center;
+  }
+  .cover h1 { font-size: 24px; font-weight: 700; margin-bottom: 8px; }
+  .cover .sub { font-size: 15px; opacity: 0.85; margin-bottom: 20px; }
+  .meta-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .chip {
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 13px;
+  }
+
+  nav {
+    background: white;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  nav a {
+    color: #1a73e8;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 20px;
+    font-weight: 500;
+  }
+
+  .section {
+    background: white;
+    margin: 16px 16px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+  .section-title {
+    background: #1a73e8;
+    color: white;
+    padding: 16px 24px;
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .section-title .num {
+    font-size: 13px;
+    opacity: 0.75;
+    margin-right: 6px;
+  }
+  .section-body { padding: 20px 24px; }
+
+  h3 {
+    font-size: 16px;
+    color: #1a73e8;
+    margin: 20px 0 8px;
+    padding-bottom: 4px;
+    border-bottom: 1.5px solid #e3f0ff;
+  }
+  h3:first-child { margin-top: 0; }
+
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 6px; }
+  p { margin-bottom: 12px; }
+
+  .warn {
+    background: #fff3e0;
+    border-left: 4px solid #e65100;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+  .warn strong { color: #bf360c; }
+  .tip {
+    background: #e8f5e9;
+    border-left: 4px solid #2e7d32;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+  .info {
+    background: #e3f2fd;
+    border-left: 4px solid #1565c0;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 12px 0;
+  }
+
+  .qa-block {
+    border: 1.5px solid #e3f0ff;
+    border-radius: 12px;
+    margin: 16px 0;
+    overflow: hidden;
+  }
+  .qa-q {
+    background: #e8f1ff;
+    padding: 14px 18px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1a3a7a;
+  }
+  .qa-a {
+    padding: 16px 18px;
+    line-height: 1.85;
+    color: #2c2c2c;
+  }
+
+  .match-row {
+    border: 1.5px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 10px 0;
+  }
+  .match-req { font-weight: 700; color: #333; margin-bottom: 6px; }
+  .match-val { color: #555; font-size: 15px; }
+  .stars { color: #f5a623; margin-left: 8px; font-size: 14px; }
+
+  .weak-block {
+    border: 1.5px solid #ffe0b2;
+    border-radius: 12px;
+    margin: 16px 0;
+    overflow: hidden;
+  }
+  .weak-q {
+    background: #fff3e0;
+    padding: 12px 18px;
+    font-weight: 700;
+    color: #bf360c;
+    font-size: 15px;
+  }
+  .weak-a {
+    padding: 14px 18px;
+    font-size: 15px;
+    color: #2c2c2c;
+  }
+
+  .checklist { list-style: none; padding: 0; }
+  .checklist li {
+    padding: 10px 16px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: "☐";
+    font-size: 18px;
+    flex-shrink: 0;
+    color: #1a73e8;
+  }
+
+  .intro-script {
+    background: #f8f9ff;
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #1c1c1e;
+    border: 1.5px solid #d0dcf7;
+  }
+  .intro-script .kw { color: #1a73e8; font-weight: 700; }
+
+  .oneliner {
+    background: linear-gradient(135deg, #e8f1ff, #f0f7ff);
+    border-radius: 12px;
+    padding: 20px 24px;
+    font-size: 17px;
+    line-height: 1.85;
+    font-weight: 500;
+    color: #0d2b6e;
+    border: 1.5px solid #c5d8ff;
+    margin-top: 8px;
+  }
+
+  .key-badge {
+    display: inline-block;
+    background: #e53935;
+    color: white;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-right: 6px;
+    font-weight: 700;
+    vertical-align: middle;
+  }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <h1>萌想科技（实习僧）<br>新媒体运营实习生</h1>
+  <p class="sub">面试准备材料 — 马仕瑾</p>
+  <div class="meta-chips">
+    <span class="chip">成都·武侯区</span>
+    <span class="chip">5天/每周 · 3个月</span>
+    <span class="chip">100元/天</span>
+    <span class="chip">截止 2026-08-16</span>
+    <span class="chip">B轮 · 150-500人</span>
+  </div>
+</div>
+
+<nav>
+  <a href="#s1">岗位速览</a>
+  <a href="#s2">匹配度</a>
+  <a href="#s3">自我介绍</a>
+  <a href="#s4">Q&A</a>
+  <a href="#s5">反问</a>
+  <a href="#s6">清单</a>
+</nav>
+
+<!-- 一 -->
+<div class="section" id="s1">
+  <div class="section-title"><span class="num">一</span>岗位与企业信息速览</div>
+  <div class="section-body">
+
+    <div class="warn">
+      <strong>🚨 面试前必做事项：</strong>提前查看<strong>「留学僧求职」公众号</strong>（JD原文强调！）并认真浏览近期文章，面试官大概率会问"你看过我们的公众号吗？哪篇让你印象深刻？"——没看过直接减分。
+    </div>
+
+    <h3>关于萌想科技 · 实习僧</h3>
+    <ul>
+      <li><strong>实习僧</strong>是萌想科技旗下知名实习/校招平台，聚焦在校大学生求职场景</li>
+      <li>旗下还有<strong>留学僧</strong>平台，服务留学生求职群体</li>
+      <li>B轮融资，150-500人规模，互联网/游戏/软件赛道，成都公司</li>
+      <li>核心产品：实习僧 App / 留学僧 App / 相关公众号矩阵</li>
+      <li>目标用户：<strong>在校大学生、应届生、留学生</strong>——这正是你自己的身份！</li>
+    </ul>
+
+    <h3>岗位职责（逐条拆解）</h3>
+    <ul>
+      <li><strong>①</strong> 负责实习僧旗下公众号的日常运营，常规推送内容的编辑、排版和发布</li>
+      <li><strong>②</strong> 负责部分选题、内容编辑、数据统计等运营工作</li>
+      <li><strong>③</strong> 日常追踪文章效果，通过有效的数据分析，优化调整，不断提高选题和文章质量</li>
+      <li><strong>④</strong> 洞察用户需求，定期收集竞品动态和行业信息，提炼可借鉴点</li>
+    </ul>
+
+    <h3>任职要求</h3>
+    <ul>
+      <li>本科或硕士在校学生，留学生优先，有经验优先</li>
+      <li>对待工作认真负责，具备良好的沟通技巧与协调能力</li>
+      <li>熟悉<strong>微信公众号后台</strong>及<strong>秀米</strong>等相关编辑工具的操作（加分项）</li>
+      <li><span class="key-badge">必做</span>提前查看留学僧求职公众号，投递时附带作品集</li>
+    </ul>
+
+    <div class="tip">
+      <strong>✅ 你天然适配这个岗位的核心原因：</strong><br>
+      你就是实习僧的目标用户——19岁在读本科生、正在找实习、深度理解同龄人的心理和内容消费习惯。这比任何"研究过目标用户"的表述都更有说服力，面试时必须把这个角度讲出来。
+    </div>
+
+  </div>
+</div>
+
+<!-- 二 -->
+<div class="section" id="s2">
+  <div class="section-title"><span class="num">二</span>岗位要求 vs 你的匹配度</div>
+  <div class="section-body">
+
+    <div class="match-row">
+      <div class="match-req">公众号日常运营：编辑、排版、发布<span class="stars">★★★★★</span></div>
+      <div class="match-val">西南民族大学新闻中心微信团队文字编辑，累计撰写原创推文20+篇；熟悉微信公众号后台、135编辑器、<strong>秀米</strong>（JD明确提到的工具）</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req">选题策划<span class="stars">★★★★★</span></div>
+      <div class="match-val">策划《全员上岸！一间宿舍的四种逐梦姿态》专题，单篇阅读量3万+；善于捕捉校园热点并深挖背后故事</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req">追踪文章效果 · 数据分析优化<span class="stars">★★★★★</span></div>
+      <div class="match-val">成都合众公益发展中心公众号运维，通过优化标题与封面图，使单篇推文平均阅读量提升20%；有数据驱动内容优化的完整实操经验</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req">洞察用户需求 · 竞品分析<span class="stars">★★★★☆</span></div>
+      <div class="match-val">自身就是目标用户（在校大学生找实习），对同龄人需求有第一手体感；IBEP香港名企项目中做过SWOT分析和市场痛点拆解；柏舍梨匠品牌策划项目有竞品分析实践</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req">工具熟练度<span class="stars">★★★★★</span></div>
+      <div class="match-val">微信公众号后台 ✓  秀米 ✓  135编辑器 ✓  Photoshop ✓  PR/剪映 ✓  AI工具（AIGC生图/视频）✓</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req">沟通协调能力<span class="stars">★★★★★</span></div>
+      <div class="match-val">创新创业联合会干事，协调5场超200人双创赛事，0失误落地；IBEP项目小组协作经验</div>
+    </div>
+
+    <h3>核心优势（面试中主动强调）</h3>
+    <div class="tip">
+      <strong>1. 你就是用户本身</strong><br>
+      实习僧的目标用户是在校大学生找实习，你19岁在读、正在找实习、在实习僧这类平台上也在找机会。你比任何"分析过用户"的人更清楚：大学生在找实习时最焦虑什么、什么样的内容会让他们点进来、什么样的推文会被转发到宿舍群。这是你独有的视角。
+    </div>
+    <div class="tip">
+      <strong>2. 完整的公众号运营闭环，且有数据成绩</strong><br>
+      从选题策划→采写→135/秀米排版→发布→数据复盘，全流程独立完成过，不是只会其中某一环。有3万+阅读量的爆款案例和20%阅读量提升的数据优化案例，两个都能量化。
+    </div>
+    <div class="tip">
+      <strong>3. AI工具应用能力——加分项</strong><br>
+      可以用AI辅助生成封面配图、优化标题、加速内容生产。对于人力有限的中小型运营团队，这是实际的生产力优势。
+    </div>
+
+  </div>
+</div>
+
+<!-- 三 -->
+<div class="section" id="s3">
+  <div class="section-title"><span class="num">三</span>自我介绍</div>
+  <div class="section-body">
+
+    <h3>1分钟版（可直接背诵，灵活调整）</h3>
+    <div class="intro-script">
+      面试官好，我是<span class="kw">马仕瑾</span>，西南民族大学新闻传播学院新闻学专业在读本科生，目前在成都就读。<br><br>
+      我应聘这个岗位有一个很直接的原因——<span class="kw">我就是实习僧的目标用户</span>。我19岁，正在找实习，我知道一个大学生在打开公众号推送的时候在想什么、什么内容会让他立刻转发、什么标题让他点都不想点。这个体感是我觉得自己最能为这个岗位带来价值的地方。<br><br>
+      具体经历方面，我在<span class="kw">学校新闻中心微信团队</span>担任文字编辑，熟悉公众号后台、秀米、135编辑器，累计撰写原创推文20余篇。我策划的《全员上岸！一间宿舍的四种逐梦姿态》专题，深挖校园热点故事，单篇阅读量做到了<span class="kw">3万+</span>。我还在成都合众公益发展中心做传播志愿者，负责公众号运维，通过优化标题和封面图，把单篇推文的平均阅读量<span class="kw">提升了20%</span>。<br><br>
+      面试前我专门去看了<span class="kw">「留学僧求职」公众号</span>，[这里可以插入你看到的具体一篇文章和你的感受，比如："我看到你们最近做的XX选题，感觉很贴近大学生求职的真实焦虑…"]。希望能加入团队，用我自己作为用户的体感和已有的运营经验，帮团队做出更打动同龄人的内容。谢谢！
+    </div>
+
+    <div class="warn">
+      <strong>⚠️ 自我介绍里必须提到：</strong>你看过「留学僧求职」公众号，并能说出一篇具体的文章或栏目。"我专门去看了你们的公众号，印象最深的是……"——用空缺处填入你实际看到的内容，这句话会让你立刻和其他候选人拉开差距。
+    </div>
+
+  </div>
+</div>
+
+<!-- 四 -->
+<div class="section" id="s4">
+  <div class="section-title"><span class="num">四</span>高频问题 Q&A</div>
+  <div class="section-body">
+
+    <div class="qa-block">
+      <div class="qa-q">Q1：你为什么想来实习僧做这个岗位？</div>
+      <div class="qa-a">
+        其实有两个原因，一个是产品认同，一个是能力匹配。<br><br>
+        产品认同方面，实习僧是我们这代在校大学生真实在用的求职平台，我自己就是这个产品的用户，我知道它在解决什么问题、目标用户在什么心态下打开它。我觉得做一个产品的运营，如果你本身就是它的用户，你天然就有别的候选人没有的洞察——你不需要"研究用户画像"，你就是那个用户。<br><br>
+        能力匹配方面，我在学校新闻中心有完整的公众号运营经历，选题、采写、秀米排版、发布、数据复盘都做过，且有量化成果。这个岗位的三条职责——日常运营编辑、数据追踪优化、竞品洞察——我都有对应的实操经验，不是从零开始学。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q2：你有哪些公众号运营经验？请举具体案例。</div>
+      <div class="qa-a">
+        我有两段最核心的经历：<br><br>
+        <strong>第一段，学校新闻中心微信团队。</strong>我担任文字编辑，参与西南民族大学和图书馆两个公众号的选题策划与运营，累计撰写原创推文20余篇，熟悉从选题→采写→秀米排版→后台发布→数据复盘的完整流程。最有代表性的案例是我策划的《全员上岸！一间宿舍的四种逐梦姿态》专题——我捕捉到毕业季"宿舍全员上岸"这个校园热点，深挖了背后四个人各自的备考故事，优化了排版视觉和互动设计，最终单篇阅读量达到3万+，账号用户活跃度和转发率都显著提升。<br><br>
+        <strong>第二段，成都合众公益发展中心传播志愿者。</strong>我负责公众号内容运维，熟练使用135编辑器和秀米进行图文排版与视觉优化。通过分析点击率数据，发现标题和封面图是阅读量的关键变量，针对性地优化后，单篇推文平均阅读量提升了20%，这是一次有明确数据反馈的优化实验。<br><br>
+        两段经历加在一起，让我既有爆款选题策划的经验，也有数据驱动优化的闭环实践。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q3：你是如何做选题策划的？有什么思路？</div>
+      <div class="qa-a">
+        我的选题思路是"从用户视角找共鸣点"，大概分三步：<br><br>
+        第一步，<strong>找到用户真实的情绪锚点</strong>。对于实习僧的公众号来说，目标用户是在校大学生，他们在求职过程中的核心情绪无非几种：焦虑（不知道从哪里开始）、迷茫（不知道适合自己的方向）、对比（别人都进大厂了我怎么办）、成就感（我拿到offer了）。好的选题一定要扣住其中一种情绪。<br><br>
+        第二步，<strong>找具体的故事载体</strong>。抽象的焦虑说不清楚，但一间宿舍四个人各自上岸的故事就很具体、很有代入感。我做《全员上岸》专题时，就是先找到情绪锚点（毕业季宿舍全员上岸的成就感和感慨），再找具体的真实人物案例来承载它。<br><br>
+        第三步，<strong>结合平台数据验证和迭代</strong>。发布后我会追踪阅读量、转发率、收藏数等指标，分析哪类选题有更强的传播力，提炼规律用于下一次选题。<br><br>
+        我觉得对于实习僧这个账号来说，最有潜力的选题方向是：真实的实习踩坑/收获案例分享、不同行业实习的横向对比、求职冷知识科普、应届生职场心态类内容——这些都是我作为用户自己最想看的。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q4：你如何追踪文章效果并优化？</div>
+      <div class="qa-a">
+        我的基本思路是"数据发现问题，假设验证方案，迭代找规律"。<br><br>
+        以我在公益机构做公众号运维的经历为例：我发现账号整体阅读量偏低，先排查是哪个环节流失了读者——我对比了"发文时间""标题风格""封面图设计"三个变量，发现点击率差异最大的是标题和封面图，而不是文章质量本身。于是我做了一组对照实验，把标题从"政策型通知文案"改成"带问句的利益型标题"，把封面图从图文混排改成简洁图片，连续测试了几篇推文，平均阅读量提升了20%。<br><br>
+        这个经历让我意识到：不能只看最终阅读量的绝对值，要把阅读路径拆分成打开率（标题+封面决定）→阅读完成率（内容质量决定）→互动率（选题情感共鸣决定），分别分析，才能找到真正的优化点。<br><br>
+        如果在实习僧这个岗位，我会建立一个简单的数据追踪表，每篇文章记录发布时间、标题类型、选题方向、阅读量、转发量、收藏量，积累一段时间后就能看出哪类内容对你们的受众最有效。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q5：你怎么理解实习僧的目标用户？你会如何洞察他们的需求？</div>
+      <div class="qa-a">
+        说实话，这个问题我不需要"研究"，因为我就是那个用户。<br><br>
+        我19岁，在成都读大二，正在找实习，我知道我的同学在什么情绪下打开实习僧：大多数时候是焦虑驱动——看到朋友说自己投简历了，或者快到某个时间节点了，才会突然来找实习机会。我们这个群体的典型特征是：信息焦虑（什么都想了解又不知从哪里开始）、对标他人（很在乎"别人都去哪里实习了"）、对真实案例的信任度远高于官方机构（更愿意相信"学长学姐亲身经历"）。<br><br>
+        所以实习僧公众号最有传播力的内容方向，我判断应该是：真实的求职经历分享（非精英视角，普通学生的真实路径）、行业/岗位解析（帮助不知道去哪儿的同学缩小范围）、时效性内容（招聘季节点提醒、某知名公司开放内推等）。<br><br>
+        我会通过：①看账号下方的高互动评论（用户自己在说什么）；②看竞品账号哪些内容转发量高；③定期问身边同学"最近找实习最困惑什么"——来持续更新对用户需求的判断。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q6：你了解哪些竞品？你会怎么做竞品分析？</div>
+      <div class="qa-a">
+        实习僧在校招/实习求职领域的直接竞品我理解有：牛客网（技术向校招社区，内容很强）、Boss直聘校园端、拉勾招聘、实习BANG、Offer多多等；公众号层面还有很多以"大厂实习经验分享"为定位的自媒体账号。<br><br>
+        我做竞品分析的思路是：不只是看对方发了什么内容，而是看什么内容让他们的读者产生了行为——转发、收藏、在评论区主动输出。这些信号说明那个选题真正击中了用户的某个需求点。<br><br>
+        具体方法：定期看竞品账号的"在看量""分享量"高的文章，按选题类型归类；观察标题句式和封面风格的规律；结合实习僧自身的用户特征，判断哪些做法可以借鉴、哪些方向是对方在做但我们没做的空白点。我会把这些整理成一个定期更新的竞品跟踪文档，方便团队参考。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q7：你熟悉哪些公众号运营相关工具？</div>
+      <div class="qa-a">
+        内容编辑排版方面：熟练使用<strong>微信公众号后台</strong>、<strong>秀米</strong>（JD里特别提到的工具，我在校媒和公益机构都用过）、135编辑器；视觉设计方面：会用Photoshop进行图像处理和封面制作；视频内容方面：会用PR/剪映完成基础剪辑；AI工具方面：擅长AI提示词工程，会用AIGC工具生成图文素材和视频素材，在柏舍梨匠品牌策划项目中用AI工作流将视觉产出效率提升了30%。<br><br>
+        数据方面，我目前主要用微信公众号自带的数据面板和Excel做基础的数据跟踪和分析，如果团队有使用专业的运营分析工具，我能快速学习上手。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q8：你最大的缺点是什么？</div>
+      <div class="qa-a">
+        我之前在团队协作中，有时候不太擅长拒绝额外加进来的任务，容易让自己的工作排得比较满。后来我开始用优先级的方式管理任务，遇到新任务先确认紧急程度和截止时间再决定怎么排序，也会提前跟对接人沟通进度，这样既能保证质量，也不会因为任务堆积影响交付时间，目前这个问题已经基本能自己调节了。
+      </div>
+    </div>
+
+    <!-- 短板应对 -->
+    <h3>可能的挑战（提前准备应对话术）</h3>
+    <div class="weak-block">
+      <div class="weak-q">⚠ 短板：没有在互联网公司做过正式运营实习</div>
+      <div class="weak-a">
+        <strong>应对：</strong>"我没有互联网公司的实习经历，但我在校媒和公益机构积累了完整的公众号运营闭环实践，且有可量化的成果——3万+阅读量的爆款案例和20%阅读量提升的优化实验。更重要的是，实习僧的目标用户就是我自己这个群体，我对这个受众的理解不需要靠研究来补，这是我觉得自己能快速上手、带来实际价值的核心原因。"
+      </div>
+    </div>
+
+    <div class="weak-block">
+      <div class="weak-q">⚠ 短板：没做过留学生向内容（留学僧平台）</div>
+      <div class="weak-a">
+        <strong>应对：</strong>"留学生求职的内容我直接经验不多，但我理解内容运营的底层逻辑是一致的——准确理解用户需求，找到情感共鸣点，数据验证迭代。如果需要做留学生向的内容，我会先系统研究目标群体的特征和痛点，同时向团队老编辑学习已有的内容规律，尽快建立对这个受众的理解。"
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- 五 -->
+<div class="section" id="s5">
+  <div class="section-title"><span class="num">五</span>向面试官反问（选2个）</div>
+  <div class="section-body">
+    <ul class="checklist">
+      <li>团队目前负责哪些账号？内容侧重方向是实习资讯类、经验分享类还是行业干货类？</li>
+      <li>新人加入后，前几周的工作重心通常是什么？是先跟着老编辑学，还是比较快就会独立负责一篇推文？</li>
+      <li>团队目前衡量一篇内容好不好的核心指标是什么？主要看阅读量、转发量，还是其他指标？</li>
+      <li>你们在内容策略上有没有在尝试用AI工具来提效？（展示你的AI能力关注度）</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 六 -->
+<div class="section" id="s6">
+  <div class="section-title"><span class="num">六</span>面试当天准备清单</div>
+  <div class="section-body">
+
+    <h3>面试前必做</h3>
+    <ul class="checklist">
+      <li><strong>认真浏览「留学僧求职」公众号</strong>，找出1-2篇你真正觉得做得好的文章，想好理由（JD明确要求！）</li>
+      <li>打开实习僧App，了解产品的核心功能和首页内容推荐逻辑</li>
+      <li>打开作品集网站，确认能正常访问：https://msj1122-jane.github.io/portfolio/</li>
+      <li>准备纸质简历2-3份（A4打印）</li>
+      <li>确认面试地点交通路线，建议提前10-15分钟到达</li>
+    </ul>
+
+    <h3>面试中</h3>
+    <ul class="checklist">
+      <li>自我介绍里主动提到"我看了你们的公众号"，并说出具体内容</li>
+      <li>用"我就是实习僧的目标用户"这个角度，在回答每个问题时都尝试带入用户视角</li>
+      <li>用具体数据说话：3万+阅读量、20%提升、20+篇推文</li>
+      <li>展示工具熟练度：微信公众号后台、秀米（JD提到的工具要主动说出来）</li>
+      <li>保持轻松自信的状态，这是个内容运营岗，面试官也期待感受到你对内容的热情</li>
+    </ul>
+
+    <h3>着装 &amp; 氛围</h3>
+    <div class="info">
+      互联网公司文化通常比较轻松，商务休闲风就好，不需要正装。可以稍微活泼一点，体现出你懂年轻人内容调性的气质。
+    </div>
+
+    <h3>一句话总结你的面试策略</h3>
+    <div class="oneliner">
+      "我是实习僧的目标用户，我知道和我一样的同龄人在求职时想看什么内容、会转发什么、会点进去什么——同时我有做出3万+阅读量爆款的选题策划经验、有数据驱动阅读量提升20%的实操案例、熟悉秀米和公众号后台工具，可以直接上手做内容。"
+    </div>
+
+  </div>
+</div>
+
+<div style="height:40px"></div>
+</body>
+</html>
