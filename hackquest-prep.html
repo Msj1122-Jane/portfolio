@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<title>HackQuest · 社群运营实习生 面试准备 — 马仕瑾</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "PingFang SC", "Helvetica Neue", sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #1a1a1a;
+    background: #0f0f1a;
+    padding: 0 0 60px;
+  }
+  .cover {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white;
+    padding: 48px 28px 40px;
+    text-align: center;
+    border-bottom: 2px solid #7c3aed;
+  }
+  .cover .logo-area { margin-bottom: 16px; }
+  .cover .logo-txt {
+    display: inline-block;
+    background: #7c3aed;
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+    padding: 8px 18px;
+    border-radius: 10px;
+    letter-spacing: 1px;
+  }
+  .cover h1 { font-size: 22px; font-weight: 700; margin: 12px 0 6px; }
+  .cover .sub { font-size: 14px; opacity: 0.75; margin-bottom: 18px; }
+  .meta-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+  .chip {
+    background: rgba(124,58,237,0.3);
+    border: 1px solid rgba(124,58,237,0.6);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 13px;
+    color: #c4b5fd;
+  }
+  .chip.hot { background: rgba(220,38,38,0.2); border-color: rgba(220,38,38,0.5); color: #fca5a5; }
+
+  nav {
+    background: #1a1a2e;
+    padding: 14px 20px;
+    border-bottom: 1px solid #2d2d4e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  nav a {
+    color: #a78bfa;
+    text-decoration: none;
+    font-size: 14px;
+    margin-right: 20px;
+    font-weight: 500;
+  }
+
+  .section {
+    background: #1a1a2e;
+    margin: 14px 14px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #2d2d4e;
+  }
+  .section-title {
+    background: linear-gradient(90deg, #7c3aed, #4f46e5);
+    color: white;
+    padding: 16px 22px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .section-title .num { font-size: 12px; opacity: 0.7; margin-right: 6px; }
+  .section-body { padding: 18px 22px; color: #e2e8f0; }
+
+  h3 { font-size: 15px; color: #a78bfa; margin: 18px 0 8px; font-weight: 700; }
+  h3:first-child { margin-top: 0; }
+  ul { padding-left: 20px; margin: 8px 0; }
+  li { margin-bottom: 7px; }
+  p { margin-bottom: 12px; color: #cbd5e1; }
+  strong { color: #e2e8f0; }
+
+  .warn {
+    background: rgba(239,68,68,0.1);
+    border-left: 4px solid #ef4444;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 12px 0;
+    color: #fca5a5;
+  }
+  .warn strong { color: #fca5a5; }
+  .tip {
+    background: rgba(16,185,129,0.1);
+    border-left: 4px solid #10b981;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 12px 0;
+    color: #6ee7b7;
+  }
+  .tip strong { color: #6ee7b7; }
+  .info {
+    background: rgba(124,58,237,0.1);
+    border-left: 4px solid #7c3aed;
+    border-radius: 0 10px 10px 0;
+    padding: 14px 18px;
+    margin: 12px 0;
+    color: #c4b5fd;
+  }
+  .info strong { color: #c4b5fd; }
+
+  .qa-block {
+    border: 1px solid #2d2d4e;
+    border-radius: 12px;
+    margin: 14px 0;
+    overflow: hidden;
+  }
+  .qa-q {
+    background: rgba(124,58,237,0.2);
+    padding: 13px 18px;
+    font-weight: 700;
+    font-size: 15px;
+    color: #c4b5fd;
+  }
+  .qa-a { padding: 15px 18px; line-height: 1.85; color: #cbd5e1; font-size: 16px; }
+
+  .match-row {
+    border: 1px solid #2d2d4e;
+    border-radius: 10px;
+    padding: 13px 18px;
+    margin: 8px 0;
+    background: rgba(255,255,255,0.02);
+  }
+  .match-req { font-weight: 700; color: #e2e8f0; margin-bottom: 5px; font-size: 15px; }
+  .match-val { color: #94a3b8; font-size: 15px; }
+  .stars { color: #f59e0b; margin-left: 8px; font-size: 14px; }
+  .match-row.ace { border-color: #10b981; background: rgba(16,185,129,0.05); }
+  .match-row.ace .match-req { color: #6ee7b7; }
+
+  .web3-term {
+    background: rgba(79,70,229,0.15);
+    border: 1px solid rgba(79,70,229,0.4);
+    border-radius: 10px;
+    padding: 12px 18px;
+    margin: 8px 0;
+  }
+  .term-name { font-weight: 700; color: #a5b4fc; font-size: 15px; margin-bottom: 4px; }
+  .term-def { color: #94a3b8; font-size: 15px; }
+
+  .intro-script {
+    background: rgba(255,255,255,0.03);
+    border-radius: 12px;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.9;
+    color: #e2e8f0;
+    border: 1px solid #2d2d4e;
+  }
+  .intro-script .kw { color: #a78bfa; font-weight: 700; }
+  .intro-script .data { color: #34d399; font-weight: 700; }
+
+  .checklist { list-style: none; padding: 0; }
+  .checklist li {
+    padding: 10px 16px;
+    border-bottom: 1px solid #1e293b;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 16px;
+    color: #cbd5e1;
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before { content: "☐"; font-size: 18px; flex-shrink: 0; color: #7c3aed; }
+
+  .oneliner {
+    background: linear-gradient(135deg, rgba(124,58,237,0.2), rgba(79,70,229,0.2));
+    border-radius: 14px;
+    padding: 20px 22px;
+    font-size: 17px;
+    line-height: 1.85;
+    font-weight: 500;
+    color: #e2e8f0;
+    border: 1px solid rgba(124,58,237,0.4);
+    margin-top: 8px;
+  }
+
+  .badge {
+    display: inline-block;
+    background: #7c3aed;
+    color: white;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 8px;
+    margin-right: 6px;
+    font-weight: 700;
+    vertical-align: middle;
+  }
+  .badge.green { background: #059669; }
+  .badge.red { background: #dc2626; }
+  .badge.orange { background: #d97706; }
+</style>
+</head>
+<body>
+
+<div class="cover">
+  <div class="logo-area"><span class="logo-txt">HACKQUEST</span></div>
+  <h1>社群运营实习生</h1>
+  <p class="sub">面试准备材料 — 马仕瑾</p>
+  <div class="meta-chips">
+    <span class="chip">成都·武侯区</span>
+    <span class="chip">3天/周 · 3个月</span>
+    <span class="chip hot">150–250元/天</span>
+    <span class="chip">可转正</span>
+    <span class="chip">截止 2026-07-19</span>
+    <span class="chip">A轮 · Web3/AI</span>
+  </div>
+</div>
+
+<nav>
+  <a href="#s1">公司速览</a>
+  <a href="#s2">匹配度</a>
+  <a href="#s3">Web3速补</a>
+  <a href="#s4">面试风格</a>
+  <a href="#s5">自我介绍</a>
+  <a href="#s6">Q&amp;A</a>
+  <a href="#s7">清单</a>
+</nav>
+
+<!-- 一 -->
+<div class="section" id="s1">
+  <div class="section-title"><span class="num">一</span>公司速览 — 先把这家公司搞清楚</div>
+  <div class="section-body">
+
+    <div class="warn">
+      <strong>⚠ HackQuest 不是普通的国内互联网公司</strong><br>
+      全球团队、Web3赛道、Gen Z创业文化、英语工作环境——面试风格跟传统大公司完全不同，不能用背答案的套路应对，他们要的是真实的思考和动手能力。
+    </div>
+
+    <h3>HackQuest 是什么</h3>
+    <ul>
+      <li><strong>定位</strong>：Web3 / AI 开发者教育平台，口号 "Web3 Programming For Everyone"</li>
+      <li><strong>产品</strong>：游戏化 Web3 编程学习平台 HackQuest.io，提供免费在线课程、黑客松比赛、线上共学营、线下开发者活动</li>
+      <li><strong>规模</strong>：170,000+ 注册用户，月增长率 30%，覆盖 180+ 国家，同类网站全球流量排名第一</li>
+      <li><strong>投资方</strong>：真格基金、知春资本、HashKey Capital，A轮，共两轮融资</li>
+      <li><strong>团队背景</strong>：成员来自芝加哥大学、康奈尔大学、卡内基梅隆大学、Meta、Duolingo 等</li>
+      <li><strong>成都地址</strong>：武侯区东方希望天祥广场 A座 4106（地铁周边）</li>
+    </ul>
+
+    <h3>起源故事（面试提到有加分）</h3>
+    <div class="info">
+      2021年2月，20多个 Gen Z 年轻人在北京四环一间地下室搞了一场科技派对（登月工坊），花3天做了一个脑机接口应用、一个跑步 Tracker 和一个火箭推进器。这是 HackQuest 的前身。这个故事说明了这家公司的基因：<strong>做出来比说出来重要，边玩边探索</strong>。
+    </div>
+
+    <h3>目标用户（社群运营需要服务的对象）</h3>
+    <ul>
+      <li>想学 Web3/区块链开发的工程师和技术爱好者</li>
+      <li>对 AI、Web3 感兴趣的创业者和开发者</li>
+      <li>主要在中国大陆、印度、美国、尼日利亚、新加坡</li>
+      <li>年龄层：Gen Z 为主，有编程基础或正在入门</li>
+    </ul>
+
+    <div class="tip">
+      <strong>✅ 关键认知：</strong>做内容之前先想清楚——你的读者不是找实习的大学生（不像实习僧），而是<strong>想学 Web3 编程的开发者/技术爱好者</strong>。选题策划、社群维护的角度要向这个人群靠拢。
+    </div>
+
+  </div>
+</div>
+
+<!-- 二 -->
+<div class="section" id="s2">
+  <div class="section-title"><span class="num">二</span>岗位要求 vs 你的匹配度</div>
+  <div class="section-body">
+
+    <div class="match-row ace">
+      <div class="match-req"><span class="badge green">王牌</span>AI工具应用能力<span class="stars">★★★★★</span></div>
+      <div class="match-val">JD 明确要求"了解国内外常见的 AI 工具/产品，并为自己赋能"——你有 AI 提示词工程、AIGC 生图/视频、智能体开发、工作流自动化，远超"了解"层级。柏舍梨匠项目用 AI 工作流提效视觉产出 30%，是有数据支撑的实操案例。</div>
+    </div>
+
+    <div class="match-row ace">
+      <div class="match-req"><span class="badge green">王牌</span>Vibe Coding 能力<span class="stars">★★★★★</span></div>
+      <div class="match-val">JD 结尾明确写着"鼓励大家 Vibe Coding"——你的简历里就有 HTML/CSS/JS 前端开发和 H5 交互页面搭建经验。对一个来面运营岗的人来说，这个能力非常罕见，一定要主动说出来。</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req">内容创作与发布（公众号/小红书/B站）<span class="stars">★★★★☆</span></div>
+      <div class="match-val">微信公众号运营有完整经历（20+篇推文，3万+阅读量），135/秀米熟练。小红书和B站运营经验相对少，但文字表达能力和平台内容逻辑触类旁通。</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req">数据监测与分析报告<span class="stars">★★★★★</span></div>
+      <div class="match-val">公益机构公众号数据优化（阅读量提升20%）；光明日报数据库项目（2000+条数据清洗与可视化）；318川藏线项目（文本数据情感分析）。有数据驱动内容优化的完整闭环。</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req">文案功底<span class="stars">★★★★★</span></div>
+      <div class="match-val">新闻学专业，20+篇原创推文，2万字品牌策划书，学术论文撰写。能根据不同平台风格调整写作方式。</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req">视频制作（花絮/剪辑/分镜）<span class="stars">★★★★☆</span></div>
+      <div class="match-val">熟练使用 PR/剪映完成基础剪辑与特效；Photoshop 视觉设计；AIGC 视频素材生成。加分项 C "视频剪辑经验" 符合。</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req">活动策划与执行<span class="stars">★★★★☆</span></div>
+      <div class="match-val">创新创业联合会干事，协调5场超200人双创赛事（含3场路演、2场分享会），0失误落地；班级宣传委员策划3场主题团日活动，参与度98%。</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req"><span class="badge orange">待补</span>Web3/区块链了解程度<span class="stars">★★★☆☆</span></div>
+      <div class="match-val">这是加分项，不是硬要求。需要在面试前补充基础认知（见第三部分），能清楚说出"我知道 HackQuest 在做什么、服务的是谁"就够了。</div>
+    </div>
+
+    <div class="match-row">
+      <div class="match-req"><span class="badge orange">待确认</span>英语阅读与沟通<span class="stars">★★★☆☆</span></div>
+      <div class="match-val">JD 要求"基础英语阅读与沟通"。面试时可能涉及用英文介绍自己或理解英文材料，提前准备一段简短英文自我介绍。</div>
+    </div>
+
+    <h3>核心优势组合</h3>
+    <div class="tip">
+      <strong>在运营候选人里，你的差异化是：文案+数据+AI工具+Vibe Coding</strong><br><br>
+      大多数投这个岗位的人只有内容/文案背景，AI工具会用但停留在"用 ChatGPT 改稿"层面，更没有前端代码能力。你是四种能力都有的复合型候选人，而这四种能力恰好全都出现在 HackQuest 的 JD 要求或公司文化里。
+    </div>
+
+  </div>
+</div>
+
+<!-- 三 -->
+<div class="section" id="s3">
+  <div class="section-title"><span class="num">三</span>Web3 基础速补 — 够用就行，不需要成为开发者</div>
+  <div class="section-body">
+
+    <p>你申请的是<strong>运营岗，不是技术岗</strong>，不需要会写代码。但你需要能流利说出 HackQuest 在做什么、服务谁、为什么重要。以下是你需要掌握的最小知识集。</p>
+
+    <div class="web3-term">
+      <div class="term-name">Web3</div>
+      <div class="term-def">下一代互联网形态，用区块链技术让用户真正"拥有"自己的数据和资产，而不是数据全部归平台所有。你一句话可以这样解释：Web1 是只读的、Web2 是读写的（但数据归平台）、Web3 是读写且自己拥有的。</div>
+    </div>
+
+    <div class="web3-term">
+      <div class="term-name">区块链 Blockchain</div>
+      <div class="term-def">去中心化的数据库，所有记录公开透明且不可篡改。把它想象成一本全世界都可以看、但没有人可以偷偷修改的账本。</div>
+    </div>
+
+    <div class="web3-term">
+      <div class="term-name">智能合约 Smart Contract</div>
+      <div class="term-def">部署在区块链上的自动化程序，满足条件就自动执行，不需要中间人。比如"A向B转账后，B自动获得数字资产"，不需要银行介入。</div>
+    </div>
+
+    <div class="web3-term">
+      <div class="term-name">黑客松 Hackathon</div>
+      <div class="term-def">开发者限时竞赛活动，通常48-72小时内从0做出一个产品原型。HackQuest 的核心活动之一，这是他们社群用户参与度最高的内容形态。</div>
+    </div>
+
+    <div class="web3-term">
+      <div class="term-name">HackQuest 的定位（最重要）</div>
+      <div class="term-def">让 Web3 开发变得像打游戏一样有趣。通过游戏化课程（通关闯关式学习）降低 Web3 编程的门槛，同时提供黑客松、共学营、加速器等活动，帮助开发者成长和找到机会。本质是 Duolingo × 开发者社区 × Web3。</div>
+    </div>
+
+    <div class="info">
+      <strong>面试时表达 Web3 认知的参考句式：</strong><br><br>
+      "我理解 HackQuest 做的事，本质上是把 Web3 开发的学习门槛拉到普通人能入手的程度——用游戏化的方式让开发者上瘾式学习。你们的用户不是要听懂区块链原理的人，是想把技术转化成实际项目的建造者。所以做社群内容，我的思路是要帮助这些人找到同伴、看到别人的成果、然后有'我也想试试'的冲动。"
+    </div>
+
+  </div>
+</div>
+
+<!-- 四 -->
+<div class="section" id="s4">
+  <div class="section-title"><span class="num">四</span>HackQuest 的面试风格 — 跟以往完全不同</div>
+  <div class="section-body">
+
+    <div class="warn">
+      <strong>⚠ 他们 JD 里写得很清楚，请认真看：</strong><br><br>
+      • "人没有所谓的培训期，<strong>希望你是主动探索的人</strong>"<br>
+      • "面试通过只代表你超过了同期的候选人（谈吐/思维等），<strong>真正的筛选是直接上手开始工作</strong>"<br>
+      • "实际工作比较弹性，有很轻松的时候，也有很忙并行几条工作线的情况"<br><br>
+      这意味着：<strong>你越早展示"我已经准备好干活"，越能脱颖而出。</strong>
+    </div>
+
+    <h3>这个面试想看什么</h3>
+    <ul>
+      <li><strong>思维方式</strong>：你是怎么看问题的？有没有自己的判断，而不只是执行别人的指令</li>
+      <li><strong>主动探索的姿态</strong>：你是等着别人告诉你怎么做，还是自己去试、去想</li>
+      <li><strong>真实的认知</strong>：你对 Web3/HackQuest 有没有真实的理解，而不是背出来的介绍</li>
+      <li><strong>会不会用工具</strong>：尤其是 AI 工具和 Vibe Coding，这在他们文化里很重要</li>
+      <li><strong>能不能沟通</strong>：基本英语读写，团队协作意识</li>
+    </ul>
+
+    <h3>面试中的注意事项</h3>
+    <div class="tip">
+      <strong>说"我尝试过"比说"我学过"更有力</strong><br>
+      比如："我之前自己用 HTML/CSS 搭过 H5 页面"比"我学过前端基础"更有说服力。HackQuest 的文化是 Doer 文化——展示你做过什么，而不是你知道什么。
+    </div>
+    <div class="tip">
+      <strong>如果他们让你当场做一个任务，不要慌</strong><br>
+      根据 JD 描述，他们可能在面试中给你一个即时任务（比如"给我们写一条小红书"，或者"帮我们看看这篇内容哪里可以优化"）。这是测试你的真实水平，展示思路比追求完美更重要。
+    </div>
+    <div class="info">
+      <strong>可以主动聊"我感兴趣的方向"</strong><br>
+      这家公司鼓励 Vibe Coding、探索新方向。可以提到："我对用 AI 工具辅助内容生产很感兴趣，也有一点前端基础，如果有机会的话，我很想尝试用代码做一个小工具或者活动页面来支持社群运营。"这类表达会让面试官眼前一亮。
+    </div>
+
+  </div>
+</div>
+
+<!-- 五 -->
+<div class="section" id="s5">
+  <div class="section-title"><span class="num">五</span>自我介绍 — 用 HackQuest 的语言讲自己</div>
+  <div class="section-body">
+
+    <p>⚠ 不要用传统"我叫XX，来自XX大学，获得了XX奖"的结构。HackQuest 看的是你的<strong>思维方式和做过什么</strong>，不是你的成绩单。</p>
+
+    <h3>1分30秒版（重点版）</h3>
+    <div class="intro-script">
+      Hi，我叫<span class="kw">马仕瑾</span>，西南民族大学新闻学在读。<br><br>
+
+      我主要有两个我觉得跟这个岗位比较匹配的能力。<br><br>
+
+      第一个是内容和社群运营。我在学校公众号团队做文字编辑，从选题到发布到数据分析全流程都做过，策划过一篇毕业专题，单篇阅读量 <span class="data">3万+</span>；也在公益机构的公众号做过数据驱动的优化实验，平均阅读量提升了 <span class="data">20%</span>。<br><br>
+
+      第二个是 AI 工具和 Vibe Coding。我用 AIGC 工具做过视觉素材生成和工作流自动化——在一个品牌策划项目里，AI 工作流把视觉产出效率提升了 <span class="data">30%</span>。我也会 HTML/CSS/JS，做过 H5 交互页面——我看到你们说"鼓励大家 Vibe Coding"，这个我有实际做过。<br><br>
+
+      我对 HackQuest 做的事情很感兴趣，因为你们把 Web3 开发做成了一个可以"玩起来"的事——我自己也是因为好奇就去 HackQuest.io 上注册看了看，确实感受到了那种游戏化的感觉很吸引人。我想用我的内容和运营能力，帮你们把这个平台的故事讲给更多中文社区的用户听。
+    </div>
+
+    <h3>简短英文自我介绍（如果被要求）</h3>
+    <div class="intro-script">
+      Hi, I'm Mashijin, a journalism student at Southwest Minzu University in Chengdu. I've been doing content operations for WeChat public accounts — writing, editing, and tracking performance data. I'm also into AI tools and have some front-end coding experience with HTML and CSS. I'm excited about HackQuest because I think making Web3 development approachable is really meaningful, and I'd love to help tell that story to more Chinese-speaking communities.
+    </div>
+
+    <div class="warn">
+      <strong>🚨 面试前必做：</strong>自己去 <strong>HackQuest.io</strong> 注册一个账号，点进去体验一下他们的课程界面。面试时说"我去注册试了"和"我看了一下网站"是完全不同的信号——前者说明你是主动探索的人，符合他们招人的标准。
+    </div>
+
+  </div>
+</div>
+
+<!-- 六 -->
+<div class="section" id="s6">
+  <div class="section-title"><span class="num">六</span>高频 Q&amp;A</div>
+  <div class="section-body">
+
+    <div class="qa-block">
+      <div class="qa-q">Q1：你了解 HackQuest 吗？为什么想来这里？</div>
+      <div class="qa-a">
+        我专门去 HackQuest.io 注册了一个账号体验过。整体感受是：它把 Web3 编程做成了闯关游戏的形式，确实比看文档学习要上瘾得多，我能理解为什么用户粘性这么高。<br><br>
+        我想来这里有几个原因：第一，你们的目标用户是 Gen Z 开发者，我对这个群体的内容消费习惯有比较直接的感知；第二，你们的文化里有 Vibe Coding 和鼓励探索，这跟我自己的习惯挺契合的——我就是那种会因为好奇去搭一个小页面的人；第三，Web3 和 AI 是我觉得这几年最有意思的方向，虽然我不是开发者，但我很想在这个氛围里工作、学习。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q2：你对社群运营的理解是什么？你会怎么做社群维护？</div>
+      <div class="qa-a">
+        我理解的社群运营，核心是让社群里的人感受到"这里值得待"——有干货、有同伴、有参与感。<br><br>
+        对于 HackQuest 的开发者社群来说，我觉得最重要的是：不要用广播式的运营逻辑（发公告、推活动），而要用<strong>对话式的逻辑</strong>——鼓励用户分享他们用 HackQuest 做出的东西、遇到的问题、学到的新东西，让其他人能看到"有人在做，我也可以"。<br><br>
+        实操层面，我会建立一个固定的用户互动节奏：比如每周在群里抛一个技术问题或有趣的 Web3 新闻发起讨论；定期整理社群里的优质内容做成推文；关注评论和私信里的高频问题，把它们变成选题。同时我也会密切追踪各帖子的互动数据，看哪类内容引发了最多讨论，并持续调整策略。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q3：你有哪些内容运营经验？举一个你最有成就感的案例。</div>
+      <div class="qa-a">
+        我最有成就感的案例是策划《全员上岸！一间宿舍的四种逐梦姿态》——我在校新闻中心做文字编辑时，捕捉到毕业季"宿舍全员上岸"这个校园热点，深挖了四个人各自备考的故事，每个人的路径都不一样但最后都成功了。<br><br>
+        我在选题、采写、排版、互动设计上都做了针对性优化——开头用反差制造悬念，中间用每个人物的视角增加代入感，结尾设置了"你们宿舍几个上岸了"的互动引导。最终单篇阅读量做到3万+，那天中午我刷新了几次后台看到数字在跳，挺有成就感的。<br><br>
+        如果拿这个经验来做 HackQuest 的内容，我会找社群里真实的开发者案例——比如"用 HackQuest 学了三个月，做出了第一个 Web3 项目"——让这些真实故事成为内容核心，而不是平台自吹自擂。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q4：你提到 AI 工具和 Vibe Coding，具体怎么用？</div>
+      <div class="qa-a">
+        AI 工具方面，我比较系统地用过几类：LLM（Claude/GPT）做文案辅助、资料整理和提示词优化；AIGC 工具（即梦/Midjourney）生成图文素材；AI 工作流自动化（在一个品牌策划项目里，把视觉素材生产效率提升了30%）；另外也尝试过智能体开发，搭建简单的自动化流程。<br><br>
+        Vibe Coding 方面，我会用 HTML/CSS/JS 做交互页面。我带队参加数据新闻大赛时，自己开发了一个展示2000多条数据的 H5 可视化页面。不是完整工程师水平，但对于做活动落地页、数据展示、简单的内容工具这类需求是够用的。<br><br>
+        如果在 HackQuest 这个岗位，我能想到的应用场景是：用 AI 辅助快速生成多平台内容版本（同一主题，微信风格和小红书风格分开写），或者用 Vibe Coding 做一个活动报名页或数据统计看板。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q5：你怎么做数据分析和内容优化？</div>
+      <div class="qa-a">
+        我的思路是把数据分析拆成三层：<strong>发现异常 → 找原因 → 验证假设</strong>。<br><br>
+        举个实际例子：我在公益机构做公众号运维时，发现账号阅读量整体偏低，但不同文章之间的差距很大。我把可能的变量拆成标题风格、封面图设计、发布时间、内容类型四个维度，逐一对比，发现点击率差异最大的是标题和封面。于是我做了针对性调整——把通知型标题改成问句型，把混排封面图改成简洁视觉——连续测试几篇后，单篇平均阅读量提升了20%。<br><br>
+        对于 HackQuest 来说，我会重点关注各平台内容的互动率（评论、转发、收藏），而不只是阅读量——因为对于开发者社群，愿意分享或讨论的内容才是真正引发共鸣的内容，这比单纯阅读量更有意义。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q6：你了解小红书和 B 站的运营逻辑吗？</div>
+      <div class="qa-a">
+        微信公众号我运营经验最丰富，小红书和B站我主要是作为用户在用，正式运营经历不多。但我理解这三个平台的内容逻辑是不同的：<br><br>
+        微信公众号是"订阅关系驱动"——用户主动关注后才会收到推文，内容质量决定打开率，适合深度内容和长期信任建立。<br><br>
+        小红书是"发现/搜索驱动"——用户更多是搜到的，而不是订阅到的，标题和封面是第一道门，关键词很重要，内容要实用、可收藏。对 HackQuest 来说，可以做"Web3 入门指南""第一个区块链项目怎么写"这类实用干货笔记。<br><br>
+        B站是"兴趣算法+社区驱动"——适合做深度视频教程、活动 Vlog、开发者访谈切片。<br><br>
+        我的计划是先把微信公众号做扎实，同时主动学习小红书和B站的内容规律，我有信心在2-3周内基本摸清节奏。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q7：你对 Web3 了解多少？会不会觉得这个赛道太陌生？</div>
+      <div class="qa-a">
+        说实话，我不是开发者背景，对 Web3 的技术层我了解的是概念层面——区块链的去中心化逻辑、智能合约的自动执行、黑客松的活动形式。技术细节我现在还在学。<br><br>
+        但我觉得这对运营岗来说，恰恰是一个优势而不是劣势：我代表的是那些"对 Web3 感兴趣、但还在门口的人"的视角。我能理解什么样的内容会让一个技术入门者感到"哦原来这个东西我能懂"。这正是 HackQuest 的内容需要打动的受众——不是已经在写智能合约的高手，而是还在观望的潜在开发者。<br><br>
+        我已经在 HackQuest.io 上注册账号开始体验课程了，也在学习基础的 Solidity 概念，我相信在工作的过程中会越来越深入。
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="qa-q">Q8：3天/周、可转正，你的时间安排能满足吗？有职业规划吗？</div>
+      <div class="qa-a">
+        3天/周对我来说没问题，可以灵活安排配合团队节奏。<br><br>
+        职业规划方面，我对内容运营和社区建设有真实的兴趣，也对 AI 工具和前端开发有持续的探索欲。HackQuest 这个环境对我特别有吸引力，因为你们不只是给一份工作，而是"把一切你想了解的都带给你"——这是 JD 里说的，我把它理解成一个允许探索、鼓励成长的环境。如果实习中能证明自己的价值，我也对转正有很大兴趣，想在这个 Web3/AI 的方向深耕下去。
+      </div>
+    </div>
+
+    <h3>如果面试官当场让你做一个任务怎么办</h3>
+    <div class="warn">
+      根据公司文化（"真正的筛选是直接上手干活"），可能出现即时任务。保持冷静，先说<strong>思路</strong>再动手，哪怕结果不完美，展示你<strong>怎么想问题</strong>比展示你输出了多完美更重要。常见任务可能是：写一条小红书/公众号内容、给现有内容提优化建议、聊一个内容选题的逻辑。
+    </div>
+
+  </div>
+</div>
+
+<!-- 七 -->
+<div class="section" id="s7">
+  <div class="section-title"><span class="num">七</span>反问 · 准备清单</div>
+  <div class="section-body">
+
+    <h3>向面试官反问（选2个，用更 casual 的方式问）</h3>
+    <ul class="checklist">
+      <li>你们目前在中文社交媒体这块，最想突破的是哪个方向？小红书还是B站，或者其他？（了解工作重心）</li>
+      <li>社群里的开发者用户对什么类型的内容互动最多？有没有哪类内容是你们想做但还没资源做的？（展示你在想如何贡献）</li>
+      <li>团队在成都这边有多少人？日常协作主要用什么工具？（了解工作方式）</li>
+      <li>你们说"鼓励 Vibe Coding"——实习生有没有机会做一些小工具或者实验性项目？（展示你的 Vibe Coding 兴趣）</li>
+    </ul>
+
+    <h3>面试前必做清单</h3>
+    <ul class="checklist">
+      <li><strong>去 HackQuest.io 注册账号，点进去体验至少一个课程模块</strong>（这是面试时最能拉开差距的一步）</li>
+      <li>搜索 HackQuest 的微信公众号/小红书/B站账号，看几篇近期内容，感受他们的内容风格</li>
+      <li>准备一个30秒的英文自我介绍（基本水平就行，不需要很流利）</li>
+      <li>准备一个你会主动提出的内容想法：比如"如果让我给 HackQuest 做一条小红书，我的选题是……"</li>
+      <li>打开作品集确认能访问：https://msj1122-jane.github.io/portfolio/</li>
+      <li>准备简历2份（带作品集链接），着装轻松舒适即可</li>
+    </ul>
+
+    <h3>一句话总结</h3>
+    <div class="oneliner">
+      "我是内容运营 × AI工具 × Vibe Coding 的复合型候选人。公众号运营有3万+阅读量的爆款案例，有数据驱动阅读量提升20%的优化实践，还会用HTML/CSS/JS做H5页面——这在运营候选人里比较少见，而这三种能力刚好都出现在 HackQuest 的 JD 和公司文化里。"
+    </div>
+
+  </div>
+</div>
+
+<div style="height: 40px;"></div>
+
+</body>
+</html>
